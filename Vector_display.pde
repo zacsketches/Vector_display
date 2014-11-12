@@ -18,6 +18,7 @@ int window_x = 400;
 int window_y = 300;
 int text_size = 16;
 
+Vector_window vector_window = new Vector_window(0, 0, window_x, 4*(window_y/5));
 Text_window text_window = new Text_window(0, 4*(window_y/5), window_x , window_y/5);
 
 PFont my_font;
@@ -139,6 +140,4 @@ class Text_window {
     text(data, text_x, text_y);
   
   }
-  
-  
 };
