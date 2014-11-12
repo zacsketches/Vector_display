@@ -38,12 +38,12 @@ void setup() {
   vector_window.add_heading(0);
   vector_window.add_heading(30);
   vector_window.add_heading(-30);
-  print(vector_window.headings);
+  println(vector_window.headings);
   
   m1.add(r1);
   m1.add(r2);
   m1.add(r3);
-  print(m1.to_text());
+  println(m1.to_text());
 }
 
 void draw() {
