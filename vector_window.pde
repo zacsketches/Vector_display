@@ -6,6 +6,8 @@ class Vector_window {
   int x_center;
   int y_center;
   
+  IntList headings; 
+  
   Vector_window(int _x, int _y, int _width, int _height) {
     x = _x;
     y = _y;
@@ -13,7 +15,11 @@ class Vector_window {
     win_height =_height; 
     x_center = (win_width - x) / 2;
     y_center = (win_height - y) /2;
+    
+    headings = new IntList();
   }
+  
+  void add_heading(int h) { headings.add(h); }
   
   void display() {
     fill(0);
