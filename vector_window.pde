@@ -95,8 +95,8 @@ class Vector_window {
     }
     
     //draw unit vectors
-    for (int i=0; i<headings.size(); i++) {
-        draw_unit_vec(headings.get(i));
+    for (int i=0; i<obstructions.size(); i++) {
+        draw_unit_vec(obstructions.get(i));
     } 
   }
   
@@ -139,9 +139,10 @@ class Vector_window {
     
   }
 
-  void draw_unit_vec(int h) {
+  void draw_unit_vec(Obstruction obs) {
     //for each heading I want to draw a unit vector of length ten pixels
     //that originates at the x_center, y_center
+    int h = obs.theta();
     int x_tip_offset = int(unit_vec_length * cos(to_radians(h)));
     int y_tip_offset = int(unit_vec_length * sin(to_radians(h)));
     
