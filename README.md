@@ -15,3 +15,4 @@ My design plan now is to have the sketch consist of three classes
 ##Build Notes
 
 1. Right now I've got the basic implementation done for the Text Window.
+2. On 11/12 I began the class for displaying the obstruction vectors.  The window is formatted, but now I need to add the unit vectors along each heading.
