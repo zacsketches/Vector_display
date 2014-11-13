@@ -16,3 +16,17 @@ My design plan now is to have the sketch consist of three classes
 
 1. Right now I've got the basic implementation done for the Text Window.
 2. On 11/12 I began the class for displaying the obstruction vectors.  The window is formatted, but now I need to add the unit vectors along each heading.
+3. I like this site for picking web safe colors
+	http://designbynur.com/eng/color/216webcolors.htm
+4. Unit vectors can now be added and displayed.  The next step is to plot the obstruction vectors.
+  - Obstruction vectors will come from the scan message.
+  - The scan message will eventually come from the serial port
+  - Getting data out of the scan message will probably be most efficient if I rely on JSON.
+  - HOWEVER...I think I want to focus today and the display of this data and not on the transmission of it.
+  - So....I can manually add obstructions to the vector window with an ArrayList<Obstruction> where Obstruction is defined as a two int class.  TRY THIS.
+5. Obstruction vectors can now be displayed by printing the data in the Obstructions ArrayList.  Not sure if this is the final data structure, but it's moving in the right direction.
+6. It's time to get to work on handling the data flow.  Let' start by playing around with the JSON capability.
+7. So after playing with JSON for a bit, I have a way to write and read a scan message into a JSON object.
+  - The comm manager will write it's latest data to a file.
+  - Vector window will read the file into a JSON object and display the data.
+  - So I need to add the JSON Read into vector window

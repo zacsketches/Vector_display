@@ -7,6 +7,7 @@ class Text_window {
   color border_color = color(25);
   color fill_color = color(240);
   color text_color = color(0);
+  int stroke_weight = 2;
   int text_offset = 10;
   
   String data;
@@ -23,6 +24,7 @@ class Text_window {
   void update(String new_data) { data = new_data; }
   void display() {
     rectMode(CORNER);
+    strokeWeight(stroke_weight);
     stroke(border_color);
     fill(fill_color);
  

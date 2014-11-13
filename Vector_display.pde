@@ -8,14 +8,14 @@
       3. Comms_manager - control serial comms to communicate with Alfred
 */
 
-Reading r1 = new Reading(0, 38, 245);
-Reading r2 = new Reading(30, 60, 330);
-Reading r3 = new Reading(-30, 90, 18);
+Reading r1 = new Reading(0, 0, 245);
+Reading r2 = new Reading(5, 30, 330);
+Reading r3 = new Reading(10, -60, 18);
 
-Scan_msg m1 = new Scan_msg();
+Scan_msg msg = new Scan_msg();
 
-int window_x = 400;
-int window_y = 300;
+int window_x = 500;
+int window_y = 600;
 int text_size = 16;
 
 Vector_window vector_window = new Vector_window(0, 0, window_x, 4*(window_y/5));
@@ -37,20 +37,23 @@ void setup() {
   
   vector_window.add_heading(0);
   vector_window.add_heading(30);
-  vector_window.add_heading(-30);
+  vector_window.add_heading(-60);
+//  vector_window.add_obstruction(new Obstruction(0, 60));
+//  vector_window.add_obstruction(new Obstruction(30, 120));
+//  vector_window.add_obstruction(new Obstruction(-60, 330));
   println(vector_window.headings);
   
-  m1.add(r1);
-  m1.add(r2);
-  m1.add(r3);
-  println(m1.to_text());
+  msg.add(r1);
+  msg.add(r2);
+  msg.add(r3);
+  println(msg.to_text());
 }
 
 void draw() {
   //stroke(0); 
   fill(0);
 
-  text_window.update(m1.to_text());
+  text_window.update(msg.to_text());
   text_window.display();
   
   vector_window.display();
