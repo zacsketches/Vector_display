@@ -33,4 +33,4 @@ My design plan now is to have the sketch consist of three classes
 8. Ok...now I've got the vector_window reading from a JSON data file to find the heading unit vectors and the obstruction vectors.  Now I need to get the text_window to read from the same JSON file.  Then I need to take all the manual scan_msg and heading_add crap out of the main sketch.
 9. Then after I've done that I'll need to finally implement the comms piece on both the Arduino and the Processing sketch.  This might force me to re-write the scanner simulator for the Glow Worm Block.
 10. Step 8 is done on 11/15
-
+11. I've got the basic comms manager requesting an update at a user configurable rate.  Now I need to go back to some of my old work and build listeners on both ends of the sketch.
