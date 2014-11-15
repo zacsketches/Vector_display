@@ -34,3 +34,4 @@ My design plan now is to have the sketch consist of three classes
 9. Then after I've done that I'll need to finally implement the comms piece on both the Arduino and the Processing sketch.  This might force me to re-write the scanner simulator for the Glow Worm Block.
 10. Step 8 is done on 11/15
 11. I've got the basic comms manager requesting an update at a user configurable rate.  Now I need to go back to some of my old work and build listeners on both ends of the sketch.
+12. on 11/15 I also added a GUI element to select a port for the Serial comms with Alfred.  This work is based on the GUIDO library which exposes a really simple framework for GUI elements.  Now, it's time to build the listeners mentioned in item 11.
